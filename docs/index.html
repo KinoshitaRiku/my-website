@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RikuKinoshita Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Top</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <p>Kinoshita Riku</p>
+      <h1>木下 陸</h1>
+      <p>個人事業主</p>
+      <p>ITエンジニア | インフラエンジニア, SREエンジニア</p>
+    </section>
+
+    <section id="profile">
+      <h2>Profile</h2>
+      <div class="card">
+        <p>
+          インフラエンジニアです。<br />
+          現在はフリーランスとして活動しています。
+        </p>
+        <p>
+          📂
+          <a href="https://github.com/your-username" target="_blank">GitHub</a>
+          | 📝
+          <a href="https://your-skill-sheet-url" target="_blank"
+            >スキルシート</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <ul>
+          <li>HTML / CSS / JavaScript / TypwScript</li>
+          <li>Vue.js / Nuxt.js</li>
+          <li>Node.js</li>
+          <li>Python / Django / Flask</li>
+          <li>MySQL / PostgreSQL</li>
+          <li>CloudFormation / CDK / Terraform</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="お名前" required />
+        <input type="email" id="email" placeholder="メールアドレス" required />
+        <input type="text" id="subject" placeholder="件名" required />
+        <textarea id="message" placeholder="メッセージ" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+      <p id="response-message"></p>
+    </section>
+
+    <!-- 確認ポップアップ -->
+    <div id="confirmation-modal" class="modal">
+      <div class="modal-content">
+        <h2>送信内容の確認</h2>
+        <p><strong>お名前:</strong> <span id="confirm-name"></span></p>
+        <p><strong>メールアドレス:</strong> <span id="confirm-email"></span></p>
+        <p><strong>件名:</strong> <span id="confirm-subject"></span></p>
+        <p><strong>メッセージ:</strong></p>
+        <div id="confirm-message" class="message-preview"></div>
+        <button id="confirm-send">送信する</button>
+        <button id="cancel-send">キャンセル</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 RikuKinoshita</p>
+    </footer>
+  </body>
+</html>

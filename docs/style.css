@@ -1,0 +1,224 @@
+/* リセットスタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 基本スタイル */
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 2;
+  padding-top: 100px; /* ヘッダー固定時の余白 */
+}
+
+/* ヘッダーの固定スタイル */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ナビゲーションバーのスタイル */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+/* ナビゲーションリンクのスタイル */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 各セクションのスタイル */
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+}
+
+#home {
+  text-align: center;
+}
+
+/* 見出しのスタイル */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* リストのスタイル */
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* ホームセクションのリンクスタイル */
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.links a:hover {
+  color: #4caf50; /* ホバー時に色を変更 */
+}
+
+/* カードスタイル */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* コンタクトセクションのスタイル */
+#contact {
+  margin-bottom: 140px; /* フッターとの間隔を広げるために余白を追加 */
+}
+
+/* フォームのスタイル */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* メッセージ入力欄 */
+textarea {
+  width: 100%;
+  height: 150px;
+}
+
+/* ボタンのスタイル */
+button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* 確認ポップアップのスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* 確認ポップアップのスタイル */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  min-height: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* 名前、メール、メッセージの表示を左寄せに */
+.modal-content p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* メッセージプレビューのスタイル */
+.message-preview {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-line;
+  text-align: left; /* メッセージ部分も左寄せ */
+  line-height: 1.4; /* 行間を狭く設定 */
+}
+
+/* 確認メッセージのスタイル */
+#response-message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* フッターのスタイル */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 40px;
+}
