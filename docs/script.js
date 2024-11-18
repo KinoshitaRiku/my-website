@@ -50,3 +50,28 @@ document.getElementById("cancel-send").addEventListener("click", function () {
   // 確認画面を閉じる
   document.getElementById("confirmation-modal").style.display = "none";
 });
+
+// ハンバーガーメニューの制御
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+// メニューリンクをクリックしたときにメニューを閉じる
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menuBtn.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+// 画面外をクリックしたときにメニューを閉じる
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+    menuBtn.classList.remove("active");
+    nav.classList.remove("active");
+  }
+});
