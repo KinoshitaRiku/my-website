@@ -25,13 +25,13 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ナビゲーションバーのスタイル */
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -39,6 +39,7 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
+  gap: 30px;
 }
 
 nav ul li {
@@ -221,6 +222,8 @@ footer {
   background-color: #333;
   color: #fff;
   margin-top: 40px;
+  position: relative;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ハンバーガーメニューボタン */
@@ -291,9 +294,11 @@ footer {
     top: 70px;
     right: -50%;
     width: 30%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     background-color: #333;
-    transition: all 0.3s ease;
+    transition: 0.3s;
+    align-items: flex-start;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
 
   nav.active {
@@ -302,11 +307,10 @@ footer {
 
   nav ul {
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 0;
   }
 
   nav ul li {
-    margin: 15px 0;
     text-align: center;
   }
 }
