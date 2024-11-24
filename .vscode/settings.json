@@ -3,5 +3,8 @@
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "liveServer.settings.port": 5500,
-  "liveServer.settings.root": "/docs"
+  "liveServer.settings.root": "/docs",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
