@@ -14,11 +14,12 @@ body {
   padding-top: 100px; /* ヘッダー固定時の余白 */
 }
 
-/* ヘッダーの固定スタイル */
+/* ヘッダーのスタイル */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  /* background-color: #333; */
+  background-color: #f0f0f0;
+  color: #333;
+  /* color: #fff; */
   height: 60px;
   position: fixed;
   top: 0;
@@ -26,9 +27,33 @@ header {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
   display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: flex-start; /* 左寄せに設定 */
+  padding: 0 20px;
+}
+
+/* タイトルのスタイル */
+.header-title {
+  font-size: 1.5em;
+  margin-left: 20px; /* 左側の余白を調整 */
+  flex-grow: 1; /* スペースを埋めて配置を調整 */
+  display: flex; /* 子要素を中央揃えにするために追加 */
+  align-items: center; /* 縦方向で中央揃え */
+  height: 100%; /* 追加：ヘッダーの高さいっぱいに広げる */
+  justify-content: flex-start; /* 追加：左寄せ */
+}
+
+/* ロゴのスタイル */
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+.logo {
+  text-decoration: none;
 }
 
 /* ナビゲーションバーのスタイル */
@@ -51,7 +76,7 @@ nav ul li {
 
 /* ナビゲーションリンクのスタイル */
 nav ul li a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
@@ -81,12 +106,10 @@ section {
 /* 見出しのスタイル */
 h1 {
   font-size: 2.5em;
-  margin-bottom: 10px;
 }
 
 h2 {
   font-size: 2em;
-  margin-bottom: 20px;
 }
 
 /* カードスタイル */
@@ -158,10 +181,6 @@ button {
   margin: 10px 0;
 }
 
-button:hover {
-  background-color: #555;
-}
-
 /* 確認ポップアップのスタイル */
 .modal {
   display: none;
@@ -221,8 +240,6 @@ button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
   margin-top: 40px;
   position: relative;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
@@ -247,7 +264,7 @@ footer {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #555;
   transition: all 0.3s;
 }
 
@@ -258,7 +275,7 @@ footer {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #555;
   transition: all 0.3s;
 }
 
@@ -289,18 +306,20 @@ footer {
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
+    margin-top: -1px; /* ボタンを少し上に移動 */
   }
 
   nav {
     position: fixed;
     top: 60px;
-    right: -50%;
-    width: 30%;
+    right: -100%; /* 初期状態で画面外に非表示 */
+    width: 100%; /* 横幅を画面いっぱいに設定 */
     height: 100vh;
-    background-color: #333;
+    background-color: #f0f0f0;
     transition: 0.3s;
     align-items: flex-start;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
   }
 
   nav.active {
