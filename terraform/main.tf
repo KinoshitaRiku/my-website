@@ -62,3 +62,12 @@ resource "aws_route53_record" "root_a_record" {
     "185.199.111.153"
   ]
 }
+
+resource "aws_route53_record" "google_verification" {
+  provider = aws.us-east-1
+  zone_id  = var.zone_id
+  name     = var.domain_name
+  type     = "TXT"
+  ttl      = 300
+  records  = [var.google_site_verification]
+}

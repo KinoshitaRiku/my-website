@@ -15,3 +15,9 @@ variable "github_pages_cname" {
   type        = string
   default     = ""
 }
+
+variable "google_site_verification" {
+  description = "Google site verification token"
+  type        = string
+  default     = ""
+}
