@@ -207,6 +207,11 @@ li {
   opacity: 1;
 }
 
+/* プロファイルセクションのスタイル */
+#profile {
+  margin-top: 50px;
+}
+
 /* コンタクトセクションのスタイル */
 #contact {
   margin-bottom: 140px; /* フッターとの間隔を広げるために余白を追加 */
