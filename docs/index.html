@@ -3,10 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riku Kinoshita Profile</title>
-    <link rel="icon" href="logo.png" type="image/x-icon" />
+
+    <!-- canonical URL  -->
+    <link rel="canonical" href="https://rkinoshita.com/" />
+
+    <!-- SEO関連のメタタグ -->
+    <meta
+      name="description"
+      content="木下陸のポートフォリオサイトです。インフラエンジニア・SREとして活動。AWSを中心としたクラウドインフラの設計・構築・運用を得意としています。フリーランスエンジニアとして活動中。"
+    />
+    <meta
+      name="keywords"
+      content="木下陸, 木下, インフラエンジニア, SRE, AWS, Python, フリーランス, エンジニア, プログラミング, システム設計, クラウド, 個人事業主"
+    />
+    <meta name="author" content="木下陸" />
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="木下陸 | インフラエンジニア/SRE" />
+    <meta
+      property="og:description"
+      content="木下陸のポートフォリオサイトです。フリーランスのインフラエンジニア・SREとして、AWSを中心としたクラウドインフラの設計・構築・運用を提供しています。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rkinoshita.com/" />
+    <meta property="og:site_name" content="Riku Kinoshita Portfolio" />
+    <meta property="og:image" content="https://rkinoshita.com/logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <title>木下陸 | インフラエンジニア/SRE</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "木下陸",
+        "givenName": "陸",
+        "familyName": "木下",
+        "alternateName": "Riku Kinoshita",
+        "jobTitle": "インフラエンジニア/SRE",
+        "description": "フリーランスのインフラエンジニア・SREとして活動。AWSを中心としたクラウドインフラの設計・構築・運用を提供。",
+        "url": "https://rkinoshita.com/",
+        "sameAs": ["https://github.com/KinoshitaRiku"],
+        "knowsAbout": [
+          "インフラ",
+          "クラウド",
+          "AWS",
+          "Python",
+          "Node.js",
+          "システム",
+          "SRE",
+          "プログラミング"
+        ],
+        "skills": [
+          "インフラ構築",
+          "クラウド設計",
+          "システム運用",
+          "プログラミング",
+          "自動化",
+          "監視設計"
+        ]
+      }
+    </script>
+
+    <!-- セキュリティヘッダー -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://docs.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://docs.google.com; font-src 'self'; frame-src https://docs.google.com; object-src 'none';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(),
+                microphone=(),
+                camera=(),
+                payment=()"
+    />
   </head>
   <body>
     <header>
@@ -30,16 +126,17 @@
     <section id="home">
       <p>Kinoshita Riku</p>
       <h1>木下 陸</h1>
-      <p>個人事業主</p>
-      <p>ITエンジニア | インフラ, SRE</p>
+      <p>フリーランス インフラエンジニア / SRE</p>
+      <p>クラウドインフラ設計・構築</p>
     </section>
 
     <section id="profile">
       <h2>Profile</h2>
       <div class="card">
         <p>
-          インフラエンジニアです。<br />
-          現在はフリーランスとして活動しています。
+          フリーランスのインフラエンジニアとして活動しています。<br />
+          AWS、Terraform、Python、Node.jsなどを用いたシステム設計・構築・運用を得意としています。<br />
+          特にクラウドインフラの設計・構築と、システムの信頼性向上に注力しています。
         </p>
         <p>
           <a
@@ -108,7 +205,7 @@
         <p><strong>件名:</strong> <span id="confirm-subject"></span></p>
         <p><strong>メッセージ:</strong></p>
         <div id="confirm-message" class="message-preview"></div>
-        <button id="confirm-send">送信する</button>
+        <button id="confirm-send">送信</button>
         <button id="cancel-send">キャンセル</button>
       </div>
     </div>
