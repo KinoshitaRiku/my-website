@@ -89,13 +89,24 @@
     </script>
 
     <!-- セキュリティヘッダー -->
+    <!-- クロスサイトスクリプティング（XSS）やその他の攻撃からサイトを保護するためのヘッダー -->
+
+    <!-- Content Security Policy: リソースの読み込み元を制限 -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://docs.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://docs.google.com; font-src 'self'; frame-src https://docs.google.com; object-src 'none';"
     />
+
+    <!-- X-Content-Type-Options: MIMEタイプのスニッフィングを防止 -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <!-- X-Frame-Options: クリックジャッキング攻撃を防止 -->
     <meta http-equiv="X-Frame-Options" content="DENY" />
+
+    <!-- Referrer-Policy: リファラー情報の送信を制御 -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Permissions-Policy: ブラウザの機能使用を制限 -->
     <meta
       http-equiv="Permissions-Policy"
       content="geolocation=(),
@@ -103,6 +114,15 @@
                 camera=(),
                 payment=()"
     />
+
+    <!-- HSTS: HTTPS通信を強制 -->
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=31536000; includeSubDomains"
+    />
+
+    <!-- X-XSS-Protection: ブラウザ組み込みのXSS対策を有効化 -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
   </head>
   <body>
     <header>
