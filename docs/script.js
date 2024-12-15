@@ -85,10 +85,17 @@ document.getElementById("cancel-send").addEventListener("click", function () {
 // ハンバーガーメニューの制御
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.querySelector("nav");
+const header = document.querySelector("header");
 
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   nav.classList.toggle("active");
+
+  if (nav.classList.contains("active")) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
 });
 
 // メニューリンクをクリックしたときにメニューを閉じる
@@ -104,5 +111,19 @@ document.addEventListener("click", (e) => {
   if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
     menuBtn.classList.remove("active");
     nav.classList.remove("active");
+  }
+});
+
+// スクロールイベントを追加
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const profileSection = document.getElementById("profile");
+  const profilePosition = profileSection.getBoundingClientRect().top;
+
+  // プロファイルセクションが画面の上部に来たらヘッダーの色を変更
+  if (profilePosition <= 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
   }
 });
