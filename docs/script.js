@@ -87,14 +87,58 @@ const menuBtn = document.getElementById("menuBtn");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 
+// メビゲーションリストのアイテムを取得
+const navItems = document.querySelectorAll("nav ul li a");
+
+// 各ナビゲーションアイテムにクリックイベントを追加
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // "Top"ボタンがクリックされた場合
+    if (this.getAttribute("href") === "#top") {
+      const header = document.querySelector("header");
+      header.classList.remove("active"); // ヘッダーのactiveクラスを削除
+      const nav = document.querySelector("nav");
+      nav.classList.remove("active"); // ナビゲーションを非アクティブにする
+      menuBtn.classList.remove("active"); // メニューボタンのactiveクラスを削除
+    }
+  });
+});
+
+// スクロールイベントを追加
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const nav = document.querySelector("nav");
+  const profileSection = document.getElementById("profile");
+  const profilePosition = profileSection.getBoundingClientRect().top;
+
+  // ナビゲーションがアクティブでない場合のみヘッダーのクラスを変更
+  if (!nav.classList.contains("active")) {
+    if (profilePosition <= 100) {
+      header.classList.add("active");
+    } else {
+      header.classList.remove("active");
+    }
+  }
+});
+
+// メニューボタンのクリックイベント
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   nav.classList.toggle("active");
 
+  // ナビゲーションがアクティブなときはヘッダーもアクティブにする
   if (nav.classList.contains("active")) {
     header.classList.add("active");
   } else {
-    header.classList.remove("active");
+    const profileSection = document.getElementById("profile");
+    const profilePosition = profileSection.getBoundingClientRect().top;
+
+    // プロファイルセクションの位置に応じてヘッダーのクラスを切り替え
+    if (profilePosition <= 100) {
+      header.classList.add("active");
+    } else {
+      header.classList.remove("active");
+    }
   }
 });
 
@@ -111,19 +155,5 @@ document.addEventListener("click", (e) => {
   if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
     menuBtn.classList.remove("active");
     nav.classList.remove("active");
-  }
-});
-
-// スクロールイベントを追加
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  const profileSection = document.getElementById("profile");
-  const profilePosition = profileSection.getBoundingClientRect().top;
-
-  // プロファイルセクションが画面の上部に来たらヘッダーの色を変更
-  if (profilePosition <= 100) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
   }
 });

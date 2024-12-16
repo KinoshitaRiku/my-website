@@ -16,7 +16,6 @@ body {
 
 /* ヘッダーのスタイル */
 header {
-  background-color: #f0f0f0;
   color: #333;
   background-color: transparent;
   color: #fff;
@@ -50,13 +49,6 @@ nav {
   align-items: center;
   height: 100%;
   transition: right 0.3s ease, visibility 0.3s ease;
-}
-
-/* スマホの時に非表示にする */
-@media (max-width: 768px) {
-  nav {
-    display: none; /* スマホの時は非表示 */
-  }
 }
 
 /* navがアクティブなときのスタイル */
@@ -357,6 +349,7 @@ footer {
   }
 
   nav {
+    display: none;
     position: fixed;
     top: 60px;
     right: -100%;
@@ -380,22 +373,11 @@ footer {
   nav ul li {
     text-align: center;
   }
-
-  header.active {
-    background-color: #fff; /* ヘッダーの背景色を白に設定 */
-    color: #333; /* ヘッダーの文字色を#333に設定 */
-  }
-}
-
-/* スクロール時のヘッダーのスタイル */
-header.scrolled {
-  background-color: #fff; /* 新しい背景色 */
-  color: #333; /* 新しい文字色 */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ヘッダーがアクティブなときのスタイル */
 header.active {
-  background-color: #fff; /* ヘッダーの背景色を白に設定 */
-  color: #333; /* ヘッダーの文字色を#333に設定 */
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
