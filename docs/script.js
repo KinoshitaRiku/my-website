@@ -129,9 +129,11 @@ menuBtn.addEventListener("click", () => {
   // ナビゲーションがアクティブなときはヘッダーもアクティブにする
   if (nav.classList.contains("active")) {
     header.classList.add("active");
+    document.body.style.overflow = "hidden";
   } else {
     const profileSection = document.getElementById("profile");
     const profilePosition = profileSection.getBoundingClientRect().top;
+    document.body.style.overflow = "";
 
     // プロファイルセクションの位置に応じてヘッダーのクラスを切り替え
     if (profilePosition <= 100) {
@@ -147,6 +149,7 @@ document.querySelectorAll("nav a").forEach((link) => {
   link.addEventListener("click", () => {
     menuBtn.classList.remove("active");
     nav.classList.remove("active");
+    document.body.style.overflow = "";
   });
 });
 
