@@ -108,12 +108,13 @@ navItems.forEach((item) => {
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   const nav = document.querySelector("nav");
-  const profileSection = document.getElementById("profile");
-  const profilePosition = profileSection.getBoundingClientRect().top;
+  const topSection = document.getElementById("top");
+  const topHeight = topSection.clientHeight;
+  const scrollPosition = window.scrollY;
 
   // ナビゲーションがアクティブでない場合のみヘッダーのクラスを変更
   if (!nav.classList.contains("active")) {
-    if (profilePosition <= 100) {
+    if (scrollPosition > topHeight / 4) {
       header.classList.add("active");
     } else {
       header.classList.remove("active");
