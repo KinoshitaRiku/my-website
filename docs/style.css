@@ -27,7 +27,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 20px;
 }
 
 /* ヘッダーがアクティブなときのスタイル */
@@ -40,7 +39,7 @@ header.active {
 /* タイトルのスタイル */
 .header-title {
   font-size: 1.5em;
-  margin-left: 20px;
+  padding-left: 20px;
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -161,22 +160,6 @@ li {
   margin-bottom: 10px;
 }
 
-.icon-link {
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  color: #333;
-  transition: opacity 0.5s ease;
-}
-
-.icon-link img {
-  vertical-align: middle;
-}
-
-.icon-link:hover {
-  opacity: 1;
-}
-
 /* プロファイルセクションのスタイル */
 #profile {
   margin-top: 50px;
@@ -206,8 +189,7 @@ textarea {
   height: 150px;
 }
 
-/* ボタンのスタイル */
-button {
+.submit-btn {
   padding: 10px;
   background-color: #333;
   color: #fff;
@@ -285,10 +267,10 @@ footer {
   display: none;
   border: none;
   background: none;
-  width: 30px;
-  height: 24px;
+  width: 60px;
+  height: 60px;
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -296,13 +278,14 @@ footer {
 
 .menu-btn__line {
   position: absolute;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
   height: 2px;
   background-color: #fff;
   transition: all 0.5s;
 }
-
 .menu-btn__line::before,
 .menu-btn__line::after {
   content: "";
@@ -343,7 +326,6 @@ footer {
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
-    margin-top: -1px; /* ボタンを少し上に移動 */
   }
 
   nav {
