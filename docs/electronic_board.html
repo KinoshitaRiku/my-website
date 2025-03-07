@@ -2,9 +2,17 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>電子蛍光板</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         background-color: black;
         display: flex;
@@ -25,7 +33,7 @@
           0 0 100px #00f;
         margin-top: 20px;
         position: relative;
-        animation: slide 10s linear infinite;
+        animation: slide 7s linear infinite;
         white-space: nowrap;
       }
       @keyframes slide {
