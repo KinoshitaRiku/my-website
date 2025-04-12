@@ -7,23 +7,11 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
     <title>電子蛍光板</title>
+    <link rel="stylesheet" href="common.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       body {
         background-color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
         color: white;
-        font-family: Arial, sans-serif;
-        overflow: hidden;
-        position: relative;
       }
       .neon-text {
         font-size: 128px;
@@ -31,8 +19,10 @@
         color: #fff;
         text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 50px #00f,
           0 0 100px #00f;
-        margin-top: 20px;
-        position: relative;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         animation: slide 7s linear infinite;
         white-space: nowrap;
       }
@@ -44,65 +34,46 @@
           left: -100%;
         }
       }
-      input {
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        outline: none;
-        text-align: center;
-        margin-top: 40px;
-        width: 80%;
-      }
       .button {
+        color: #fff;
         position: absolute;
         top: 10px;
         right: 10px;
-        padding: 10px 20px;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        background-color: transparent;
       }
-
+      #textInput {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
       @media (max-width: 768px) {
         .neon-text {
           font-size: 64px;
-        }
-        input {
-          width: 90%;
         }
       }
     </style>
   </head>
   <body>
-    <button class="button">☓</button>
+    <button class="button" onclick="toggleElementVisibility('textInput')">
+      ☓
+    </button>
     <div class="neon-text" id="displayText">電子蛍光板</div>
     <input
       type="text"
       id="textInput"
       placeholder="ここに文字を入力"
-      oninput="updateText()"
+      oninput="updateDisplayText('textInput', 'displayText', '電子蛍光板')"
     />
 
+    <script src="common.js"></script>
     <script>
-      function updateText() {
-        const input = document.getElementById("textInput").value;
-        document.getElementById("displayText").textContent =
-          input || "電子蛍光板";
-      }
-
-      // ボタンを押すと入力欄を表示・非表示を切り替える
-      document.querySelector(".button").addEventListener("click", function () {
-        const inputField = document.getElementById("textInput");
-        if (inputField.style.display === "none") {
-          inputField.style.display = "block"; // 入力欄を表示
-        } else {
-          inputField.style.display = "none"; // 入力欄を隠す
-        }
-      });
+      // 時計機能を表示したい場合は以下のコードを追加
+      /*
+      const clockDiv = document.createElement('div');
+      clockDiv.innerHTML = '<div id="time" style="color: white; font-size: 2rem;"></div>';
+      document.body.appendChild(clockDiv);
+      startClock();
+      */
     </script>
   </body>
 </html>
