@@ -1,34 +1,43 @@
-/* 共通のスタイル */
+/* 共通リセット */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* HTML・BODYの制御 */
 html,
 body {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; /* ←これで縦横ともにスクロール禁止 */
+  font-family: Arial, sans-serif;
 }
 
+/* レイアウト中央寄せ */
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
-/* レスポンシブデザイン */
+/* はみ出し防止 */
+.content {
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* レスポンシブ */
 @media (max-width: 768px) {
   .content {
     width: 90%;
   }
 }
 
-/* ボタンスタイル */
+/* ボタン */
 .button {
   position: relative;
   padding: 10px;
@@ -36,6 +45,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   background-color: transparent;
+  max-width: 100%;
 }
 
 /* 入力フィールド */
@@ -47,4 +57,5 @@ input {
   text-align: center;
   margin-top: 20px;
   width: 80%;
+  max-width: 500px;
 }
