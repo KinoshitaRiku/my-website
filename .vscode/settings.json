@@ -2,7 +2,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "liveServer.settings.port": 5500,
+  "liveServer.settings.port": 5501,
   "liveServer.settings.root": "/docs",
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"

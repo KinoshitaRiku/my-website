@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- canonical URL  -->
     <link rel="canonical" href="https://rkinoshita.com/" />
-
-    <!-- SEO関連のメタタグ -->
     <meta
       name="description"
       content="木下陸のポートフォリオサイトです。インフラエンジニア・SREとして活動。AWSを中心としたクラウドインフラの設計・構築・運用を得意としています。フリーランスエンジニアとして活動中。"
@@ -17,8 +13,6 @@
       content="木下陸, 木下, インフラエンジニア, SRE, AWS, Python, フリーランス, エンジニア, プログラミング, システム設計, クラウド, 個人事業主"
     />
     <meta name="author" content="木下陸" />
-
-    <!-- OGP設定 -->
     <meta property="og:title" content="木下陸 | インフラエンジニア/SRE" />
     <meta
       property="og:description"
@@ -30,7 +24,6 @@
     <meta property="og:image" content="https://rkinoshita.com/logo.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
     <title>木下陸 | インフラエンジニア/SRE</title>
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
     <link
@@ -53,8 +46,6 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
-
-    <!-- 構造化データ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -87,11 +78,6 @@
         ]
       }
     </script>
-
-    <!-- セキュリティヘッダー -->
-    <!-- クロスサイトスクリプティング（XSS）やその他の攻撃からサイトを保護するためのヘッダー -->
-
-    <!-- Content Security Policy: リソースの読み込み元を制限 -->
     <meta
       http-equiv="Content-Security-Policy"
       content="
@@ -105,14 +91,8 @@
         object-src 'none';
       "
     />
-
-    <!-- X-Content-Type-Options: MIMEタイプのスニッフィングを防止 -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-
-    <!-- Referrer-Policy: リファラー情報の送信を制御 -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-    <!-- Permissions-Policy: ブラウザの機能使用を制限 -->
     <meta
       http-equiv="Permissions-Policy"
       content="geolocation=(),
@@ -120,128 +100,101 @@
                 camera=(),
                 payment=()"
     />
-
-    <!-- HSTS: HTTPS通信を強制 -->
     <meta
       http-equiv="Strict-Transport-Security"
       content="max-age=31536000; includeSubDomains"
     />
-
-    <!-- X-XSS-Protection: ブラウザ組み込みのXSS対策を有効化 -->
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
   </head>
   <body>
     <header>
-      <!-- <a href="#home" class="logo">
-        <img src="logo.png" alt="Company Logo" />
-      </a> -->
-      <b class="header-title">Riku Kinoshita</b>
+      <b class="header-title">RK Systems</b>
       <button class="menu-btn" id="menuBtn">
         <span class="menu-btn__line"></span>
       </button>
       <nav>
         <ul>
-          <li><a href="#top">Top</a></li>
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#profile">会社概要</a></li>
+          <li><a href="#representative">代表者</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="top">
-      <h2>Kinoshita Riku</h2>
-      <h1>木下 陸</h1>
-      <h3>フリーランス</h3>
-      <h3>ITエンジニア / インフラ / SRE</h3>
-    </section>
+    <main>
+      <section id="top">
+        <h1>RK Systems</h1>
+      </section>
 
-    <section id="profile">
-      <h2>Profile</h2>
-      <div class="card">
-        <p>
-          フリーランスのインフラエンジニアとして活動しています。<br />
-          AWS、Terraform、Python、Node.jsなどを用いたシステム設計・構築・運用を得意としています。<br />
-          特にクラウドインフラの設計・構築と、システムの信頼性向上に注力しています。
-        </p>
-        <p>
-          <a
-            href="https://github.com/KinoshitaRiku"
-            target="_blank"
-            class="icon-link"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-              alt="GitHub"
-              width="20"
-              height="20"
-            />
-            <span>GitHub</span>
-          </a>
-          <br />
-          <a
-            href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit?gid=1596464148#gid=1596464148"
-            target="_blank"
-            class="icon-link"
-          >
-            <img
-              src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png"
-              alt="Google Sheets"
-              width="20"
-              height="20"
-            />
-            <span>スキルシート</span>
-          </a>
-        </p>
-        <!-- <p>
-          <a href="https://www.rkinoshita.com/" target="_blank">
-            <span>法人サイト/RKSystems</span>
-          </a>
-        </p> -->
-      </div>
-    </section>
+      <section id="services">
+        <h2>事業内容</h2>
+        <div class="card">
+          <h3>クラウドインフラの設計・構築・運用</h3>
+          <p>
+            RK
+            Systemsは、クラウドインフラの設計・構築・運用を専門とする企業です。<br />
+            AWS、Terraform、Python、Node.jsなどの技術を駆使し、信頼性の高いシステムを提供しています。
+          </p>
+        </div>
+      </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card">
-        <ul>
-          <li>HTML / CSS / JavaScript / TypeScript</li>
-          <li>Vue.js / Nuxt.js</li>
-          <li>Node.js</li>
-          <li>Python / Django / Flask</li>
-          <li>MySQL / PostgreSQL</li>
-          <li>CloudFormation / CDK / Terraform</li>
-        </ul>
-      </div>
-    </section>
+      <section id="profile">
+        <h2>会社概要</h2>
+        <div class="card">
+          <table>
+            <tr>
+              <th>社名</th>
+              <td>RK Systems</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>木下陸</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>東京都渋谷区</td>
+            </tr>
+            <tr>
+              <th>設立日</th>
+              <td>2024年4月</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>10万円</td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <ul>
-          <li>
-            <a href="electronic_board/">電子蛍光板</a>
-          </li>
-          <li>
-            <a href="clock/">デジタル時計</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section id="representative">
+        <h2>代表者</h2>
+        <div class="card">
+          <p>
+            木下陸個人サイトの<a href="https://rkinoshita.com/">RK Systems</a>
+            の代表者です。
+          </p>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="お名前" required />
-        <input type="email" id="email" placeholder="メールアドレス" required />
-        <input type="text" id="subject" placeholder="件名" required />
-        <textarea id="message" placeholder="メッセージ" required></textarea>
-        <button type="submit" class="submit-btn">送信</button>
-      </form>
-      <p id="response-message"></p>
-    </section>
+      <section id="contact">
+        <h2>お問い合わせ</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="お名前" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="メールアドレス"
+            required
+          />
+          <input type="text" id="subject" placeholder="件名" required />
+          <textarea id="message" placeholder="メッセージ" required></textarea>
+          <button type="submit" class="submit-btn">送信</button>
+        </form>
+        <p id="response-message"></p>
+      </section>
+    </main>
 
-    <!-- 確認ポップアップ -->
     <div id="confirmation-modal" class="modal">
       <div class="modal-content">
         <h2>送信内容の確認</h2>
